@@ -127,7 +127,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.webfaction.com'
 EMAIL_HOST_USER = 'tlc_castle'
 EMAIL_HOST_PASSWORD = 'ichbins80'
-DEFAULT_FROM_EMAIL = 'ichbins80'
+DEFAULT_FROM_EMAIL = 'hello@castle.chiffre.me'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
