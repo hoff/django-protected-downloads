@@ -1,13 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-welcome to the castle app!<br>
 
 
+<div id="status_bar" style="margin-bottom:10px;">
+{% if user.is_authenticated %}
+you are logged in as <b>{{  user.username }}</b> | <a href="/accounts/logout">logout</a>
+{% else %}
+you are not logged in. Please <a href="/accounts/login" >login</a> or <a href="/accounts/register" >sign up</a>
+{% endif %}
+</div>
 
 {% if user.is_authenticated %}
-you are logged in as <b>{{  user.username }}</b>
-<a href="/accounts/logout">logout</>
-{% else %}
-<a href="/accounts/login" >login</a> or <a href="/accounts/register" >sign up</a> to get in!
+<div id="authed_content">
+here are some resources only authenticated users can see:
+<a href="/resources/secret" >secret resources</a>
+</div>
+    {% if user.is_superuser %}
+    <div id="superuser_content">
+    as a superuser, you also have access to the <a href="/console" >user console</a>
+    </div>
+    {% endif %}
+
 {% endif %}
 {% endblock %}

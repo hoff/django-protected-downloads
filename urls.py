@@ -6,6 +6,7 @@ from django.conf.urls.defaults import patterns, include, url
 
 urlpatterns = patterns('',
     (r'^accounts/', include('registration.urls')),
+    (r'^console/$', 'castle.views.console'),
     (r'^$', 'castle.views.home'),
 
     # Examples:

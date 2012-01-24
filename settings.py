@@ -8,7 +8,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('hoff', 'hello@castle.chiffre.me'),
 )
 
 MANAGERS = ADMINS
@@ -16,7 +16,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/home/hoff/code/playground/castle/castle.db',                      # Or path to database file if using sqlite3.
+        'NAME': '/home/tlc/webapps/ableton/playground/castle.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -117,9 +117,17 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'registration',
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
 )
+
+
+
+# for production
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'tlc_castle'
+EMAIL_HOST_PASSWORD = 'ichbins80'
+DEFAULT_FROM_EMAIL = 'ichbins80'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -143,3 +151,11 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from local_settings import *
+except ImportError, e:
+    pass
+    
+# no settings beyond this point!
+    

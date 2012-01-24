@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h4>castle app users</h4>
+{% for user in users %}
+<div class="user_row">{{ user.username }} | {{user.email}} active: {% if user.is_active %}<span style="color:green;">yes</span>{% else %}<span style="color:green;">no</span>{% endif %} | last login: {{ user.last_login|timesince }} ago</div>
+{% endfor %}
+{% endblock %}
