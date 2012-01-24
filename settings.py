@@ -104,6 +104,8 @@ TEMPLATE_DIRS = (
     '/home/tlc/webapps/ableton/playground/castle/templates',
 )
 
+SECURE_MEDIA = '/home/tlc/webapps/ableton/playground/castle/secure/'
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
 )

@@ -1,12 +1,12 @@
 <html>
 <head>
-<title>caste app</title>
+<title>The Castle - protecting what's good since 2012</title>
 <link href='http://fonts.googleapis.com/css?family=Gudea:400,700,400italic' rel='stylesheet' type='text/css'>
 <style type="text/css">
 html, body{
     margin:0px;
     padding:0px;
-    height: 100%;
+    
 }
 
 html{
@@ -24,22 +24,42 @@ body{
     margin:15px auto 0px auto;
     background-color:white;
 }
+#home_link{
+    text-decoration: none;
+    font-weight:bold;
+    color:#333;
+}
 
 #content{
-    height: 400px;
+    min-height: 400px;
 }
 label{
     float:left; 
     width:130px;
 }
+p{
+    margin:0px 0px 10px 0px;
+}
+ul {
+    margin:5px 0px 0px 0px;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+li{
+    color:red;
+    font-size:11px;
+}
+
 </style>
 </head>
 
 <body>
 <div id="wrap">
 <div id="header" style="text-align:left;">
-    <!--<a href="/"><img id='logo'  src="http://www.menneske.org/projects/castle-icon.png" style="float:left; height:70px;"></a>-->
-    <div id='title' style="float:left; line-height:80px; font-size:40px; text-align:center;"><a id="home_link" href="/">Castle App</a></div>
+    <a href="/"><img id='logo'  src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Grey_castle_icon.svg/120px-Grey_castle_icon.svg.png" style="float:left; width:70px; height:70px;"></a>
+    <div id='title' style="float:left; line-height:80px; font-size:40px; text-align:center;"><a id="home_link" href="/">The Castle</a></div>
 </div>
 <div id="content" style="clear:both;">
 {% block content %}
@@ -49,7 +69,7 @@ label{
 <div id="subtitle" style="font-size:16px; color:#222; clear:both;">
     This is an app to demonstrate user management and authentication methods, using a python backend. 
     It was implemented with python/django, uwsgi, apache, sqlite, and an smtp mail server on webfaction's shared hosting.
-    <br>The source code is available at <a href="http://github.com/castle" >github</a>.
+    <br>The source code is available at <a href="https://github.com/hoff/playground" target="blank" >github</a>.
     </div>
 </div>
 </div>

@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+<h4>log in with your username and password</h4>
 <form action="/accounts/login/" method="post">{% csrf_token %}
 {{ form.as_p }}
-<input type="submit" value="Submit" />
+<div style="margin-left:130px;">
+    <input type="submit" value="login" />
+    <button onclick="window.location.href ='/'" type="button">cancel</button>
+</div>
 </form>
 {% endblock %}

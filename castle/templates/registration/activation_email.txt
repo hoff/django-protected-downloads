@@ -1,5 +1,10 @@
-This is the email body, and it has:
+Hi there!
 
-activation key: {{ activation_key }}
+Your Castle App account has been successfully created, please follow this link to activate it: 
+<a href="http://castle.chiffre.me/accounts/activate/{{ activation_key }}/">/accounts/activate/{{ activation_key }}/</a>
 
-it is valid for: {{ expiration_days }}
+Please keep in mind that this link is only valid for {{ expiration_days }} days.
+
+Thanks for signing up!
+
+The Castle App Team

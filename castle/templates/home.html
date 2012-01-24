@@ -4,20 +4,22 @@
 
 <div id="status_bar" style="margin-bottom:10px;">
 {% if user.is_authenticated %}
-you are logged in as <b>{{  user.username }}</b> | <a href="/accounts/logout">logout</a>
+You are logged in as <b>{{  user.username }}</b> | <a href="/accounts/logout">logout</a>
 {% else %}
-you are not logged in. Please <a href="/accounts/login" >login</a> or <a href="/accounts/register" >sign up</a>
+You are not logged in. Please <a href="/accounts/login" >login</a> or <a href="/accounts/register" >sign up</a> to get in.
 {% endif %}
 </div>
 
 {% if user.is_authenticated %}
 <div id="authed_content">
-here are some resources only authenticated users can see:
-<a href="/resources/secret" >secret resources</a>
+<p>As an authenticated user, have exclusive access to these images:</p>
+<a href="/view/synth.jpg" ><img src="/serve/synth.jpg" style="width:140px; height:140px;"/></a>
+<a href="/view/castle.jpg" ><img src="/serve/castle.jpg" style="width:140px; height:140px;"/></a>
+
 </div>
     {% if user.is_superuser %}
     <div id="superuser_content">
-    as a superuser, you also have access to the <a href="/console" >user console</a>
+    <p>As a superuser, you also have access to the <a href="/console" >user console</a>.</p>
     </div>
     {% endif %}
 

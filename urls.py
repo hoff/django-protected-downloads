@@ -1,12 +1,18 @@
 from django.conf.urls.defaults import patterns, include, url
-
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^accounts/', include('registration.urls')),
+    # user console, only accessible for superusers
     (r'^console/$', 'playground.castle.views.console'),
+    # view files, only accessible for authenticated user
+    (r'^view/(?P<filename>.*)/$', 'playground.castle.views.view_file'),
+    # serving files, only accessible for authenticated users
+    (r'^serve/(?P<filename>.*)/$', 'playground.castle.views.serve_file'),
+    # downloading files, only accessible for authenticated users
+    (r'^download/(?P<filename>.*)/$', 'playground.castle.views.download_file'),    
+    
     (r'^$', 'playground.castle.views.home'),
 
     # Examples:
@@ -17,5 +23,5 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 )

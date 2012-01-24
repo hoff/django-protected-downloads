@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 
-used when activation fails, has: {{activation_key}} which is the key used in this attempt
+{% if account %}
+
+
+<h4>You're account has been activated!<h4>
+
+you can now <a href="/accounts/login" >login</a> ( your username is <b>{{ account }}</b>)
+
+{% else %}
+
+Sorry, something went wrong!
+
+{% endif %}
 
 {% endblock %}

@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+<h4>Complete the form below to create an account.</h4>
 <form action="/accounts/register/" method="post">{% csrf_token %}
 {{ form.as_p }}
-<input type="submit" value="register!" />
+<div style="margin-left:130px;">
+    <input type="submit" value="create account" />
+    <button onclick="window.location.href ='/'" type="button">cancel</button></div>
 </form>
 {% endblock %}
