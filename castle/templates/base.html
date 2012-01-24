@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>caste app</title>
+<link href='http://fonts.googleapis.com/css?family=Gudea:400,700,400italic' rel='stylesheet' type='text/css'>
+<style type="text/css">
+html{
+    font-family: 'Gudea', sans-serif;
+}
+</style>
+</head>
+
+<body>
+<div id="wrap" style="width:800px; margin:0px auto;">
+<div id="header" style="text-align:center;">
+    <a href="/"><img id='logo'  src="http://www.menneske.org/projects/castle-icon.png" style="height:150px;"></a>
+    <div id='title' style="line-height:50px; font-size:40px; text-align:center;">Castle App</div>
+    <div id="subtitle" style="font-size:16px; color:#222;">
+    This is an app to demonstrate user management and authentication methods, using a python backend.<br>
+    The source code is available at <a href="http://github.com/castle" >github</a>.
+    </div>
+</div>
+<div id="content" style="clear:both;">
+<h1>{{ request.user.username }}</h1>
+{% block content %}
+{% endblock %}
+</div>
+</div>
+</body>
+</html>

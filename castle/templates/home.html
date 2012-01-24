@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+welcome to the castle app!<br>
+
+
+
+{% if user.is_authenticated %}
+you are logged in as <b>{{  user.username }}</b>
+<a href="/accounts/logout">logout</>
+{% else %}
+<a href="/accounts/login" >login</a> or <a href="/accounts/register" >sign up</a> to get in!
+{% endif %}
+{% endblock %}
