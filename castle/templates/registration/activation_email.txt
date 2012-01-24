@@ -1,7 +1,7 @@
 Hi there!
 
 Your Castle App account has been successfully created, please follow this link to activate it: 
-<a href="http://castle.chiffre.me/accounts/activate/{{ activation_key }}/">/accounts/activate/{{ activation_key }}/</a>
+http://castle.chiffre.me/accounts/activate/{{ activation_key }}/
 
 Please keep in mind that this link is only valid for {{ expiration_days }} days.
 
