@@ -101,7 +101,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'playground.urls'
 
 TEMPLATE_DIRS = (
-    '/home/hoff/code/playground/castle/templates',
+    '/home/tlc/webapps/ableton/playground/castle/templates',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
