@@ -15,7 +15,7 @@ from django.core.servers.basehttp import FileWrapper
 
 import mimetypes
 import os
-import settings
+from playground import settings
 
 
 def home(request):
